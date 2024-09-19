@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex justify-center mt-10">
+        <div class="mockup-phone border-primary">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-4 p-2">
+                    <div class="stats shadow">
+                        <div class="stat">
+                            <div class="stat-title">Available Balance</div>
+                            <div id="account-balance" class="stat-value">9400</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div>
+                        <button id="show-add-money" class="btn btn-lg">Add Money</button>
+                        <button id="show-cash-Out" class="btn btn-lg">Cash OUt</button>
+                        <button id="show-transaction" class="btn btn-lg">Transaction</button>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- add money start  -->
+                    <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Add Money Amount</span>
+                                </label>
+                                <input id="input-add-money" type="text" placeholder="Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="input-pin-number" type="password" autocomplete="off" placeholder="Pin Number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-add-money" class="btn btn-primary">Add MOney</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- add money end  -->
+
+                    <!-- Cash Out start -->
+                    <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Cash Out Amount</span>
+                                </label>
+                                <input id="input-cash-out-amount" type="text" placeholder="Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="input-cash-out-pin-number" type="password" autocomplete="off"
+                                    placeholder="Pin Number" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Cash Out End -->
+                    <div id="transaction-history" class="hidden">
+                        <h2 class="text-2xl text-center">Transaction History</h2>
+
+                        <div id="transaction-container" class="space-y-5">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    </script>
+    <script src="js/utility.js"></script>
+    <script src="js/addMoney.js"></script>
+    <script src="js/test.js"></script>
+</body>
+
+</html>
